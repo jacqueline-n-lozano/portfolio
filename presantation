@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        h1 { color: #333; }
+        .container { max-width: 600px; margin: auto; }
+        a { color: blue; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola! Soy Jacqueline</h1>
+        <p>¡Estoy dando mis primeros pasos en análisis de datos!</p>
+        <p>Por ahora, mi enfoque principal está en la herramienta Power BI.</p>
+        <p>Aquí encontrarás los proyectos que iré realizando.</p>
+        <h2>📊 Mis Proyectos</h2>
+        <ul>
+            <li><a href="#">Proyecto Supermercado - POWER BI</a></li>
+        </ul>
+        <h2>📞 Contacto</h2>
+        <p><a href="https://www.linkedin.com/in/jacqueline-n-lozano">LinkedIn</a> | <a href="mailto:jacquelinelozano2014@gmail.com">Email</a></p>
+    </div>
+</body>
+</html>
