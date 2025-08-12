@@ -6,33 +6,29 @@
   <title>Portfolio de Jacqueline Lozano</title>
   <style>
     body {
-      font-family: Broadway, Broadway;
-      text-align: center;
-      background: #F2EFE9;
+      background: #F2F2F2;
       margin: 0;
-      padding: 40px;
+      padding: 0;
+      text-align: center;
     }
     h1 {
-      color: #594D3E;
+      font-family: 'Tw Cen MT', sans-serif;
+      background-color: rgba(2, 89, 89, 0.8); /* #025959 con 20% de transparencia */
+      color: white;
+      margin: 0;
+      padding: 20px 0;
+      font-size: 36px;
     }
     .intro {
-      color: #8C7E6C;
-      font-family: Berlin Sans FB, Berlin Sans FB;
+      font-family: 'Gill Sans MT', sans-serif;
       font-size: 18px;
+      color: #000;
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: justify;
+      line-height: 1.6;
+      padding: 0 20px;
     }
-    .footer-grid {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .card.contacto {
-      padding: 15px 20px;
-      width: 180px;
-      background-color: #E4E2D9;
-      font-size: 14px;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -41,36 +37,50 @@
       margin: 40px auto;
     }
     .card {
-      background-color: #D9D7CC;
+      background-color: rgba(3, 166, 166, 0.8); /* #03A6A6 con 20% de transparencia */
       border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
       transition: 0.3s;
     }
     .card:hover {
       transform: scale(1.05);
     }
-    a {
+    .card a {
       text-decoration: none;
-      color: #8C7E6C;
-      font-weight: bold;
+      font-family: 'Broadway', sans-serif;
+      font-size: 20px;
+      color: white;
+    }
+    .footer-grid {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .card.contacto {
+      width: 200px;
     }
   </style>
 </head>
 <body>
   <h1>Jacqueline Lozano</h1>
-  <p class="intro">Bienvenidos a mi portfolio</p>
-  <p class="intro">Aquí encontrarán mis proyectos agrupados por herramienta</p>
 
+  <p class="intro">
+    Soy estudiante de Antropología Social y Cultural en la Facultad de Filosofía y Letras de la Universidad de Buenos Aires, donde me restan 13 materias para graduarme.
+    En paralelo, decidí formarme como Analista de Datos en la Facultad de Ciencias Económicas de la misma universidad, finalizando la Diplomatura en 2024 con una nota promedio de 9 (nueve).
+    Además, realicé cursos en Coderhouse para seguir explorando este mundo.
+    Durante este año desarrollé diversos proyectos para aplicar y consolidar lo aprendido, los cuales vas a poder explorar en este portfolio.
+    <br><br>Gracias por tu interés :) :) :)
+  </p>
 
   <div class="grid">
-  <div class="card"><a href="powerbi.html">Proyectos en Power BI</a></div>
-  <div class="card"><a href="mysql.html">Proyectos en MySQL</a></div>
-  <div class="card"><a href="tableau.html">Proyectos en Tableau</a></div>
+    <div class="card"><a href="powerbi.html">Power BI</a></div>
+    <div class="card"><a href="tableau.html">Tableau</a></div>
+    <div class="card"><a href="mysql.html">MySQL</a></div>
   </div>
 
   <div class="footer-grid">
-    <div class="card contacto"><a href="contacto.html">Contacto</a></div>
+    <div class="card contacto"><a href="contacto.html">Contacto y CV</a></div>
   </div>
 </body>
 </html>
+
