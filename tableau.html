@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Proyectos en MySQL</title>
+  <title>Proyectos en Tableau</title>
   <style>
     body {
       font-family: 'Gill Sans MT', sans-serif;
@@ -11,23 +11,23 @@
       margin: 0;
       padding: 0;
     }
-    /* Encabezado estilo página principal */
+    /* Encabezado */
     h1 {
-      background-color: rgba(2, 89, 89, 0.8); /* #025959 con transparencia */
+      background-color: rgba(2, 89, 89, 0.8);
       color: white;
       margin: 0;
       padding: 20px 0;
       font-size: 36px;
     }
-    /* Contenedor general de proyectos */
+    /* Contenedor general */
     .projects {
       max-width: 800px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    /* Tarjetas de proyecto */
+    /* Tarjetas */
     .project {
-      background-color: rgba(3, 166, 166, 0.8); /* #03A6A6 con transparencia */
+      background-color: rgba(3, 166, 166, 0.8);
       border-radius: 10px;
       padding: 15px;
       margin: 15px 0;
@@ -35,7 +35,7 @@
     }
     .project:hover {
       transform: scale(1.03);
-      background-color: rgba(3, 166, 166, 1); /* un poco más intenso en hover */
+      background-color: rgba(3, 166, 166, 1);
     }
     /* Enlaces */
     .project a {
@@ -44,7 +44,7 @@
       color: white;
       font-size: 18px;
     }
-    /* Botón volver al inicio */
+    /* Botón volver */
     .back {
       margin-top: 30px;
     }
@@ -62,18 +62,20 @@
 <body>
   <h1>Proyectos en Tableau</h1>
 
-  <p class="project">
-    <a href="Documentación Proyecto Depresión - Jacqueline Lozano.pdf" target="_blank">
-      📄 Documentación del Proyecto "Estudiantes y Depresión" (PDF)
-    </a>
-  </p>
-
-  <p class="project">
-    <a href="Proyecto Tableau Estudiantes y Depresión.twbx" download>
-      💻 Proyecto en Tableau "Estudiantes y Depresión" (TWBX)
-    </a>
-  </p>
-
-  <a class="back-link" href="index.html">← Volver al inicio</a>
+  <div class="projects">
+    <p class="project">
+      <a href="Documentación Proyecto Depresión - Jacqueline Lozano.pdf" target="_blank">
+        📄 Documentación del Proyecto "Estudiantes y Depresión" (PDF)
+      </a>
+    </p>
+    <p class="project">
+      <a href="Proyecto Tableau Estudiantes y Depresión.twbx" download>
+        💻 Proyecto en Tableau "Estudiantes y Depresión" (TWBX)
+      </a>
+    </p>
+    <div class="back">
+      <a href="index.html">← Volver al inicio</a>
+    </div>
+  </div>
 </body>
 </html>
