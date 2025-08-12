@@ -2,31 +2,78 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Proyectos en Tableau</title>
+  <title>Proyectos en MySQL</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #F2EFE9;
+      font-family: 'Gill Sans MT', sans-serif;
+      background-color: #F2F2F2;
       text-align: center;
-      padding: 40px;
+      margin: 0;
+      padding: 0;
     }
+    /* Encabezado estilo página principal */
     h1 {
-      color: #594D3E;
+      background-color: rgba(2, 89, 89, 0.8); /* #025959 con transparencia */
+      color: white;
+      margin: 0;
+      padding: 20px 0;
+      font-size: 36px;
     }
-    .message {
-      margin-top: 40px;
-      color: #8C7E6C;
+    /* Contenedor general de proyectos */
+    .projects {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    a {
-      color: #8C7E6C;
+    /* Tarjetas de proyecto */
+    .project {
+      background-color: rgba(3, 166, 166, 0.8); /* #03A6A6 con transparencia */
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+      transition: 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.03);
+      background-color: rgba(3, 166, 166, 1); /* un poco más intenso en hover */
+    }
+    /* Enlaces */
+    .project a {
       text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 18px;
+    }
+    /* Botón volver al inicio */
+    .back {
+      margin-top: 30px;
+    }
+    .back a {
+      text-decoration: none;
+      color: #025959;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .back a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>📈 Proyectos en Tableau</h1>
-  <p class="project"><a href="Documentación Proyecto Depresión - Jacqueline Lozano.pdf" target="_blank">📄 Documentación del Proyecto "Estudiantes y Depresión" (PDF)</a></p>
-  <p class="project"><a href="" target="_blank">💻 Proyecto en Tableau "Estudiantes y Depresión"</a></p>
-  <p><a href="index.html">← Volver al inicio</a></p>
+  <h1>Proyectos en Tableau</h1>
+
+  <p class="project">
+    <a href="Documentación Proyecto Depresión - Jacqueline Lozano.pdf" target="_blank">
+      📄 Documentación del Proyecto "Estudiantes y Depresión" (PDF)
+    </a>
+  </p>
+
+  <p class="project">
+    <a href="Proyecto Tableau Estudiantes y Depresión.twbx" download>
+      💻 Proyecto en Tableau "Estudiantes y Depresión" (TWBX)
+    </a>
+  </p>
+
+  <a class="back-link" href="index.html">← Volver al inicio</a>
 </body>
 </html>
