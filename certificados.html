@@ -22,38 +22,66 @@
     .projects {
       max-width: 900px;
       margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       padding: 0 20px;
     }
     .project {
       background-color: rgba(3, 166, 166, 0.8);
       border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 15px;
       transition: 0.3s;
+      cursor: pointer;
     }
     .project:hover {
       transform: scale(1.02);
       background-color: rgba(3, 166, 166, 1);
     }
-    .project a {
-      text-decoration: none;
-      font-weight: bold;
+    .project p {
       color: white;
-      font-size: 18px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: bold;
     }
     .certificate-img {
       max-width: 100%;
-      height: auto;
+      height: 150px;
+      object-fit: cover;
       border-radius: 8px;
-      margin-top: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
     }
-    .certificate-img:hover {
-      transform: scale(1.05);
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
     .back {
-      margin-top: 30px;
+      margin: 30px 0;
     }
     .back a {
       text-decoration: none;
@@ -69,28 +97,39 @@
 <body>
   <h1>Certificados</h1>
 
-    <div class="project">
-      <p style="color:white; font-size:18px; margin:0;">🏅 Diplomatura en Gestión y Análisis de Datos - FCE UBA</p>
-      <a href="Análisis y Gestión de Datos FCE-UBA LOZANO.jpg" target="_blank">
-        <img src="Análisis y Gestión de Datos FCE-UBA LOZANO.jpg" alt="Diplomatura FCE UBA" class="certificate-img"/>
-      </a>
+  <div class="projects">
+    <div class="project" onclick="openModal('Análisis y Gestión de Datos FCE-UBA LOZANO.jpg')">
+      <p>🏅 Diplomatura en Gestión y Análisis de Datos - FCE UBA</p>
+      <img src="Análisis y Gestión de Datos FCE-UBA LOZANO.jpg" alt="Diplomatura FCE UBA" class="certificate-img"/>
     </div>
 
-    <div class="project">
-      <p style="color:white; font-size:18px; margin:0;">🏅 Certificado Curso Tableau Flex - Coderhouse</p>
-      <a href="Coderhouse Jacqueline Lozano.png" target="_blank">
-        <img src="Coderhouse Jacqueline Lozano.png" alt="Certificado Tableau Coderhouse" class="certificate-img"/>
-      </a>
+    <div class="project" onclick="openModal('Coderhouse Jacqueline Lozano.png')">
+      <p>🏅 Certificado Curso Tableau Flex - Coderhouse</p>
+      <img src="Coderhouse Jacqueline Lozano.png" alt="Certificado Tableau Coderhouse" class="certificate-img"/>
     </div>
 
-    <div class="project">
-      <p style="color:white; font-size:18px; margin:0;">🏅 Certificado Curso SQL Flex - Coderhouse</p>
-      <a href="Coderhouse sql Jacqueline Lozano.png" target="_blank">
-        <img src="Coderhouse SQL LOZANO.png" alt="Certificado SQL Coderhouse" class="certificate-img"/>
-      </a>
+    <div class="project" onclick="openModal('Coderhouse SQL LOZANO.png')">
+      <p>🏅 Certificado Curso SQL Flex - Coderhouse</p>
+      <img src="Coderhouse SQL LOZANO.png" alt="Certificado SQL Coderhouse" class="certificate-img"/>
     </div>
   </div>
 
+  <!-- Modal -->
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
   <p class="back"><a href="index.html">← Volver al inicio</a></p>
+
+  <script>
+    function openModal(src) {
+      document.getElementById("imgModal").style.display = "block";
+      document.getElementById("modalImg").src = src;
+    }
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+  </script>
 </body>
 </html>
